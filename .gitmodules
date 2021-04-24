@@ -1,4 +1,4 @@
 [submodule "poky"]
 	path = poky
 	url = git://git.yoctoproject.org/poky
-	branch = Hardknott
+	branch = hardknott
