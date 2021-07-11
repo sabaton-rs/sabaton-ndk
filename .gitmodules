@@ -1,8 +1,8 @@
 [submodule "poky"]
-	path = poky
+	path = yocto/poky
 	url = git://git.yoctoproject.org/poky
 	branch = hardknott
 [submodule "meta-clang"]
-	path = meta-clang
+	path = yocto/meta-clang
 	url = git://github.com/kraj/meta-clang.git
 	branch = hardknott
