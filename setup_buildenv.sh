@@ -13,9 +13,12 @@ cd yocto/poky/
 bitbake-layers add-layer ../../meta-sabaton/
 
 ## Copy the aarch64 configuration to the local config
-cp $SABATON_NDK_ROOT/buildconf/aarch64_sabaton/local.conf conf/local.conf
+cp $SABATON_NDK_ROOT/yocto/meta-sabaton/conf/local.conf conf/local.conf
+cp -r $SABATON_NDK_ROOT/yocto/meta-sabaton/conf/multiconfig conf/
 
 #bitbake core-image-minimal -c populate_sdk
 
+echo "Run the following command for building all"
+echo "bitbake mc:aarch64:core-image-minimal -c populate_sdk mc:armv7:core-image-minimal -c populate_sdk"
 
 
