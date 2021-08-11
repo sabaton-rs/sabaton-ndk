@@ -1,5 +1,8 @@
 # sabaton-ndk
-The Yocto environment for the Sabaton Native SDK
+The Yocto environment for the Sabaton Native SDK. 
+
+# Sabaton? what is it?
+Stay posted!
 
 # Install pre-requisites on Ubuntu
 ```
