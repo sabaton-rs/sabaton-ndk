@@ -11,7 +11,7 @@ INSANE_SKIP_${PN}-dev += "dev-so dev-deps dev-elf"
 
 BBCLASSEXTEND = "native"
 
-DEPENDS = "openssl cyclonedds-native"
+DEPENDS = "openssl cyclonedds-native iceoryx"
 RDEPENDS_${PN} = ""
 
 S = "${WORKDIR}/git"
