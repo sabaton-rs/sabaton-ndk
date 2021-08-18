@@ -17,6 +17,12 @@ BBCLASSEXTEND = "native"
 
 EXTRA_OECMAKE += "-DROUDI_ENVIRONMENT=ON"
 
+FILES_${PN} += " \
+        ${bindir}/iox-roudi \
+"
+
+SYSROOT_DIRS += "${bindir}"
+
 # Get rid of default configuration
 do_install_append() {
 
