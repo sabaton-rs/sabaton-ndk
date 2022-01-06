@@ -1,4 +1,7 @@
+if [[ ! -v SABATON_NDK_ROOT ]]; then
 SABATON_NDK_ROOT=`pwd`
+fi
+
 
 [ ! -d "yocto/poky/buildtools" ] && yocto/poky/scripts/install-buildtools
 
