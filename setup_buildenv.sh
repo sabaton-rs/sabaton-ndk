@@ -24,6 +24,6 @@ cp -r $SABATON_NDK_ROOT/yocto/meta-sabaton/conf/multiconfig conf/
 echo "Run the following command for building all"
 echo "bitbake mc:aarch64:sabaton-ndk-image -c populate_sdk mc:armv7:sabaton-ndk-image -c populate_sdk"
 
-bitbake mc:aarch64:sabaton-ndk-image -c populate_sdk
+#bitbake mc:aarch64:sabaton-ndk-image -c populate_sdk
 
 
