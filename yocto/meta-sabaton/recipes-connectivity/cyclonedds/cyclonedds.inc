@@ -9,15 +9,17 @@ inherit cmake
 INSANE_SKIP_${PN} += "dev-so dev-deps dev-elf"
 INSANE_SKIP_${PN}-dev += "dev-so dev-deps dev-elf"
 
-BBCLASSEXTEND = "native"
+#BBCLASSEXTEND = "native"
 
-DEPENDS = "openssl cyclonedds-native iceoryx"
+#DEPENDS = "openssl cyclonedds-native iceoryx"
+DEPENDS = "openssl iceoryx"
+
 RDEPENDS_${PN} = ""
 
 S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE = " \
-        -DBUILD_IDLC=OFF \
+        -DBUILD_IDLC=ON \
         -DENABLE_TOPIC_DISCOVERY=ON \
         -DENABLE_TYPE_DISCOVERY=ON \
         "
