@@ -27,7 +27,7 @@ EXTRA_OECMAKE = " \
 FILES_${PN} += "${libdir}/*.so"
 FILES_${PN}-dev = "${libdir}/* ${includedir}"
 
-do_install_append() {
+do_install:append() {
 
 	install ${WORKDIR}/build/bin/ddsconf ${D}${bindir}	 || true
 }
