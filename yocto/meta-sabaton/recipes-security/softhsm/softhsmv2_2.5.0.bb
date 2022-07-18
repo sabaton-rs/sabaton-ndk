@@ -23,8 +23,8 @@ EXTRA_OECONF += " \
     --with-objectstore-backend-db \
     "
 
-FILES_${PN} += "${libdir}/softhsm/*.so"
-FILES_${PN}-dev = "${libdir}/softhsm/* ${includedir}"
-FILES_${PN}-dbg += "${libdir}/softhsm/.debug"
-FILES_${PN}-staticdev += "${libdir}/softhsm/*.a "
+FILES:${PN} += "${libdir}/softhsm/libsofthsm2.so"
+FILES:${PN}-dev = "${libdir}/softhsm/* ${includedir}"
+FILES:${PN}-dbg += "${libdir}/softhsm/.debug"
+FILES:${PN}-staticdev += "${libdir}/softhsm/*.a "
 
