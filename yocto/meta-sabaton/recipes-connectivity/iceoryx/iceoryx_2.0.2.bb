@@ -1,7 +1,7 @@
 DESCRIPTION = "Eclipse iceoryx™ - true zero-copy inter-process-communication "
 SECTION = "connectivity"
-DEPENDS = "ncurses acl"
-LICENSE = "Apache-2"
+DEPENDS = "ncurses acl cpptoml"
+LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE;md5=46d6aa0ba1fa2ed247cd8d42f20b72f4"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}-${PV}:"
@@ -14,7 +14,7 @@ S = "${WORKDIR}/git/iceoryx_meta"
 inherit cmake 
 BBCLASSEXTEND = "native"
 
-EXTRA_OECMAKE += "-DROUDI_ENVIRONMENT=ON"
+EXTRA_OECMAKE += "-DROUDI_ENVIRONMENT=ON -DDOWNLOAD_TOML_LIB=OFF "
 
 FILES_${PN} += " \
         ${bindir}/iox-roudi \
