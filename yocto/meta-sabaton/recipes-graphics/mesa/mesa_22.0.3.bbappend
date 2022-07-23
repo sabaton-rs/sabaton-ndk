@@ -1,0 +1,1 @@
+PACKAGECONFIG:append = "v3d virgl gallium vulkan broadcom"
