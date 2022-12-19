@@ -52,6 +52,6 @@ FILES_${PN}-dbg += "${libdir}/ModemManager/.debug"
 SYSTEMD_SERVICE_${PN} = "ModemManager.service"
 
 ## Don't install any of the configuration files
-do_install_append() {
+do_install:append() {
     rm -rf ${D}/usr/share/ModemManager
 }

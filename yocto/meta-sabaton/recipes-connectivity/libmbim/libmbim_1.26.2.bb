@@ -14,6 +14,6 @@ inherit autotools pkgconfig
 SRC_URI = "http://www.freedesktop.org/software/${BPN}/${BPN}-${PV}.tar.xz"
 SRC_URI[sha256sum] = "10c77bf5b5eb8c92ba80e9b519923ad9b898362bc8e1928e2bc9a17eeba649af"
 
-do_install_append() {
+do_install:append() {
     rm -rf ${D}/usr/share/bash-completion
 }
