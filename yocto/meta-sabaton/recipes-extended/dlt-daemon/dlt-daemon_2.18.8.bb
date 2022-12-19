@@ -43,4 +43,5 @@ FILES_${PN}-doc += "${datadir}/dlt-filetransfer"
 do_install:append() {
     rm -f ${D}${bindir}/dlt-test-*
     rm -rf ${D}/usr/lib/systemd
+    rm -rf ${D}/usr/share
 } 
