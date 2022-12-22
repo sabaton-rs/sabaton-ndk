@@ -5,4 +5,3 @@
 [submodule "meta-clang"]
 	path = yocto/meta-clang
 	url = https://github.com/kraj/meta-clang.git
-	branch = langdale
