@@ -32,12 +32,13 @@ PACKAGECONFIG[dlt-dbus] = "-DWITH_DLT_DBUS=ON,-DWITH_DLT_DBUS=OFF,dbus,dbus-lib"
 PACKAGECONFIG[udp-connection] = "-DWITH_UDP_CONNECTION=ON,-DWITH_UDP_CONNECTION=OFF"
 
 # Command line options
-PACKAGECONFIG[dlt-system] = "-DWITH_DLT_SYSTEM=ON,-DWITH_DLT_SYSTEM=OFF"
+#PACKAGECONFIG[dlt-system] = "-DWITH_DLT_SYSTEM=ON, -DWITH_DLT_SYSTEM=OFF"
 PACKAGECONFIG[dlt-adaptor] = "-DWITH_DLT_ADAPTOR=ON,-DWITH_DLT_ADAPTOR=OFF,,dlt-daemon-systemd"
 PACKAGECONFIG[dlt-console] = "-DWITH_DLT_CONSOLE=ON,-DWITH_DLT_CONSOLE=OFF,,dlt-daemon-systemd"
 
 inherit autotools gettext cmake systemd
 
+EXTRA_OECMAKE += "-DWITH_DLT_SYSTEM=ON "
 FILES_${PN}-doc += "${datadir}/dlt-filetransfer"
 
 do_install_append() {
