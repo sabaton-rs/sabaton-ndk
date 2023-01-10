@@ -39,9 +39,7 @@ PACKAGECONFIG[dlt-console] = "-DWITH_DLT_CONSOLE=ON,-DWITH_DLT_CONSOLE=OFF,,dlt-
 inherit autotools gettext cmake systemd
 
 EXTRA_OECMAKE += "-DWITH_DLT_SYSTEM=ON "
-
 FILES_${PN}-doc += "${datadir}/dlt-filetransfer"
-
 
 do_install_append() {
     rm -f ${D}${bindir}/dlt-test-*
