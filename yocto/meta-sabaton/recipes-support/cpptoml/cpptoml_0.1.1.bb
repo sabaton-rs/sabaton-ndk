@@ -5,7 +5,7 @@ BRANCH = "master"
 SRC_URI = "git://github.com/skystrife/cpptoml.git;protocol=ssh;branch=${BRANCH}"
 SRCREV = "fededad7169e538ca47e11a9ee9251bc361a9a65"
 
-SRC_URI:append = " file://0001_add_limits_h.patch"
+SRC_URI_append = " file://0001_add_limits_h.patch"
 
 DEPENDS = ""
 RDEPENDS_${PN} = ""
@@ -20,7 +20,11 @@ EXTRA_OECMAKE = " \
 			"
 
 # Install CMake modules in the location that BitBake looks.
+<<<<<<< HEAD
 do_install:append() {
+=======
+do_install_append() {
+>>>>>>> main
 
 	install -d ${D}${datadir}/cmake/Modules
 	install -m 0444 ${WORKDIR}/git/cmake/cpptomlConfig.cmake.in ${D}${datadir}/cmake/Modules
@@ -29,4 +33,7 @@ do_install:append() {
 ALLOW_EMPTY_${PN} = "1"
 FILES_${PN}-staticdev += "${includedir}/* ${libdir}/* ${datadir}/*"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
