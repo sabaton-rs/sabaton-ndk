@@ -8,10 +8,10 @@ LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=84b4d2c6ef954a2d4081e775a270d0d0"
 
 require selinux_common.inc
 
-inherit lib_package python3native
+inherit lib_package python3native pkgconfig
 
-DEPENDS += "libsepol libpcre"
-DEPENDS_append_libc-musl = " fts"
+DEPENDS += "libsepol libpcre "
+DEPENDS:append:libc-musl = " fts"
 
 S = "${WORKDIR}/git/libselinux"
 
@@ -24,6 +24,6 @@ def get_policyconfigarch(d):
 
 EXTRA_OEMAKE += "${@get_policyconfigarch(d)}"
 EXTRA_OEMAKE += "LDFLAGS='${LDFLAGS} -lpcre' LIBSEPOLA='${STAGING_LIBDIR}/libsepol.a'"
-EXTRA_OEMAKE_append_libc-musl = " FTS_LDLIBS=-lfts"
+EXTRA_OEMAKE:append:libc-musl = " FTS_LDLIBS=-lfts"
 
 BBCLASSEXTEND = "native"

@@ -12,8 +12,8 @@ cd yocto/poky/
 
 . oe-init-build-env 
 
-###bitbake-layers add-layer ../../meta-clang/
 bitbake-layers add-layer ../../meta-sabaton/
+bitbake-layers add-layer ../../meta-clang/
 
 ## Copy the aarch64 configuration to the local config
 cp $SABATON_NDK_ROOT/yocto/meta-sabaton/conf/local.conf conf/local.conf

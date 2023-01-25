@@ -44,7 +44,7 @@ do_configure () {
     oe_runconf
 }
 
-do_install_append () {
+do_install:append () {
     rm -fr ${D}/usr/share
 }
 

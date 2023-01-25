@@ -20,7 +20,11 @@ EXTRA_OECMAKE = " \
 			"
 
 # Install CMake modules in the location that BitBake looks.
+<<<<<<< HEAD
+do_install:append() {
+=======
 do_install_append() {
+>>>>>>> main
 
 	install -d ${D}${datadir}/cmake/Modules
 	install -m 0444 ${WORKDIR}/git/cmake/cpptomlConfig.cmake.in ${D}${datadir}/cmake/Modules
@@ -29,3 +33,7 @@ do_install_append() {
 ALLOW_EMPTY_${PN} = "1"
 FILES_${PN}-staticdev += "${includedir}/* ${libdir}/* ${datadir}/*"
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> main

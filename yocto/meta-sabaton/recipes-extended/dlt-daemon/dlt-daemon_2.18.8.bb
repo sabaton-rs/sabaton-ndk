@@ -12,7 +12,7 @@ SECTION = "console/utils"
 LICENSE = "MPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8184208060df880fe3137b93eb88aeea"
 
-DEPENDS = "zlib gzip-native"
+DEPENDS = "zlib gzip-native pkgconfig-native"
 
 SRC_URI = "git://github.com/COVESA/${BPN}.git;protocol=https \
 "
@@ -41,7 +41,8 @@ inherit autotools gettext cmake systemd
 EXTRA_OECMAKE += "-DWITH_DLT_SYSTEM=ON "
 FILES_${PN}-doc += "${datadir}/dlt-filetransfer"
 
-do_install_append() {
+do_install:append() {
     rm -f ${D}${bindir}/dlt-test-*
     rm -rf ${D}/usr/lib/systemd
+    rm -rf ${D}/usr/share
 } 
