@@ -28,3 +28,5 @@ FILES:${PN}-dev = "${libdir}/softhsm/* ${includedir}"
 FILES:${PN}-dbg += "${libdir}/softhsm/.debug"
 FILES:${PN}-staticdev += "${libdir}/softhsm/*.a "
 
+INSANE_SKIP:${PN}-dev += "dev-so dev-deps dev-elf"
+

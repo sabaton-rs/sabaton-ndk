@@ -7,11 +7,8 @@ inherit cmake
 #inherit native
 
 INSANE_SKIP_${PN} += "dev-so dev-deps dev-elf"
-INSANE_SKIP_${PN}-dev += "dev-so dev-deps dev-elf"
+INSANE_SKIP:${PN}-dev += "dev-so dev-deps dev-elf"
 
-#BBCLASSEXTEND = "native"
-
-#DEPENDS = "openssl cyclonedds-native iceoryx"
 DEPENDS = "openssl iceoryx"
 
 RDEPENDS_${PN} = ""
