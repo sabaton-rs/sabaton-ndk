@@ -53,6 +53,7 @@ SYSTEMD_PACKAGES = "${PN}"
 # their PipeWire configuration files.
 EXTRA_OEMESON += " \
     -Devl=disabled \
+    -Ddbus=disabled \
     -Dtests=disabled \
     -Dudevrulesdir=${nonarch_base_libdir}/udev/rules.d/ \
     -Dsystemd-system-unit-dir=${systemd_system_unitdir} \
